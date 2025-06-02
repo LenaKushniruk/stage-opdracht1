@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #222831;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  width: 90vw;
+  max-width: 1000px;
+  height: 80vh;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #7c3aed;
+  overflow: hidden;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background: #7c3aed;
+  padding: 2rem 1.5rem;
+  color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+img{
+    width: 6rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+
+.categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 5px transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.category-btn:hover{
+    color: green;
+}
+
+
+.category-btn.active {
+  color: #e0e0e0;
+}
+
