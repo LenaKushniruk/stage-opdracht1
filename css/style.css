@@ -1,17 +1,16 @@
 *{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
   background: #222831;
   color: #e0e0e0;
   display: flex;
@@ -27,7 +26,7 @@ body {
   height: 80vh;
   background: #121212;
   border-radius: 12px;
-  box-shadow: 0 0 6px #7c3aed;
+  box-shadow: 0 0 4px #7c3aed;
   overflow: hidden;
 }
 
@@ -45,7 +44,7 @@ body {
 }
 
 img{
-    width: 6rem;
+  width: 6rem;
 }
 
 .logo {
@@ -75,6 +74,8 @@ img{
   cursor: pointer;
   box-shadow: 0 0 5px transparent;
   transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: "Rubik", sans-serif;
+
 }
 
 .category-btn.active:hover{
@@ -87,3 +88,31 @@ img{
   color: #e0e0e0;
 }
 
+main{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  margin-left: 4rem;
+}
+
+input{
+  height: 2.3rem;
+  background: none;
+}
+
+input:hover{
+  cursor: pointer;
+}
+
+.add-task{
+  background: #36f2aa;
+  width: 8rem;
+  height: 2.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #0a0a0a; 
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
