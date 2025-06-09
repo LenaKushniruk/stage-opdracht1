@@ -12,33 +12,29 @@
 </head>
 <body>
   <div class="app-container">
-    
+
     <aside class="sidebar">
       <div class="logo">
         <img src="/img/logo.webp" alt="VRcafe logo">
       </div>
+      <button class="menu-toggle" aria-label="Toon/verberg categorieën">☰</button>
       <nav class="categories">
-        <button class="category-btn active" data-cat="Werk">Werk</button>
-        <button class="category-btn active" data-cat="Persoonlijk">Persoonlijk</button>
-        <button class="category-btn active" data-cat="Vrije tijd">Vrije tijd</button>
+        <button class="category-btn" data-cat="Werk">Werk</button>
+        <button class="category-btn" data-cat="Persoonlijk">Persoonlijk</button>
+        <button class="category-btn" data-cat="Vrije tijd">Vrije tijd</button>
       </nav>
     </aside>
 
-<main class="main-content">
-  <section class="input-section">
-    <div class="input-wrapper">
-      <input type="text" id="taskInput" placeholder="Voeg een taak toe..." />
-      <button class="add-task" id="addTaskBtn">Toevoegen</button>
-    </div>
-  </section>
-  <hr class="divider" />
-  <section class="tasks-section">
-    <!-- Hier komen de taken -->
-  </section>
-</main>
-
-
-</main>
+    <main class="main-content">
+      <section class="input-section">
+        <div class="input-wrapper">
+          <input type="text" id="taskInput" placeholder="Voeg een taak toe..." />
+          <button class="add-task" id="addTaskBtn">Toevoegen</button>
+        </div>
+      </section>
+      <hr class="divider" />
+      <section class="tasks-section"></section>
+    </main>
 
   </div>
 </body>
