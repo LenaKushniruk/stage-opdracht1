@@ -6,6 +6,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const categories = document.querySelector('.categories');
 
 let selectedCategory = null;
+let allTasks = [];
 
 initApp();
 
@@ -64,6 +65,7 @@ function addTask() {
       text: task,
       category: selectedCategory
     };
+    allTasks.push(taskObj);
     createTaskElement(taskObj);
     taskInput.value = '';
     saveTasks();
@@ -86,6 +88,12 @@ function createTaskElement(taskObj) {
   deleteButton.className = 'deleteTask';
 
   deleteButton.addEventListener('click', function () {
+    const index = allTasks.findIndex(
+      t => t.text === taskObj.text && t.category === taskObj.category
+    );
+    if (index !== -1) {
+      allTasks.splice(index, 1);
+    }
     listItem.remove();
     saveTasks();
   });
@@ -96,20 +104,12 @@ function createTaskElement(taskObj) {
 }
 
 function saveTasks() {
-  const tasks = [];
-
-  document.querySelectorAll('.task-item').forEach(item => {
-    tasks.push({
-      text: item.querySelector('span').textContent.trim(),
-      category: item.getAttribute('data-category')
-    });
-  });
-
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem('tasks', JSON.stringify(allTasks));
 }
 
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  allTasks = tasks;
   tasksSection.innerHTML = '';
   tasks.forEach(createTaskElement);
   filterTasksByCategory();
@@ -121,3 +121,4 @@ function filterTasksByCategory() {
     item.style.display = itemCat === selectedCategory ? 'flex' : 'none';
   });
 }
+
